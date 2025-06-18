@@ -1,7 +1,6 @@
 # 🧠 TopDownShooterTemplate - Unity Starter Project
 
 <p align="center">
-  <img src="https://i.imgur.com/OB1RUTo.gif" width="600" alt="demo gif">
 </p>
 
 > ⚙️ A modular and extendable **Top-Down Shooter** template made with Unity. Built with modern architecture practices for easy expansion, testing, and performance.  
@@ -68,14 +67,6 @@ Assets/
 
 ---
 
-## 📸 Screenshots
-
-| Gameplay | Upgrade Panel |
-|---------|----------------|
-| ![](https://i.imgur.com/tMNp74Y.png) | ![](https://i.imgur.com/RLFz7tK.png) |
-
----
-
 ## 🎮 How to Play
 
 - **Move:** `W`, `A`, `S`, `D`
@@ -95,7 +86,7 @@ Assets/
 
 2. Open with **Unity 2022 or later**
 
-3. Run the `MainScene` from the `Scenes` folder
+3. Run the `BasicControllScene` from the `Scenes` folder
 
 ---
 
