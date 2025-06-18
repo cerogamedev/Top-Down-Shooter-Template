@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            // collision.GetComponent<EnemyHealth>().TakeDamage(damage);
+            collision.GetComponent<EnemyController>().TakeDamage(damage);
             DisableSelf();
         }
     }

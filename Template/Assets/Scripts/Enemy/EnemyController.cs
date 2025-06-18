@@ -6,9 +6,13 @@ public class EnemyController : MonoBehaviour
     public float attackRange = 1.5f;
     public int maxHealth = 3;
 
+    [SerializeField] private GameObject xpOrbPrefab;
+
     private Transform player;
     private Rigidbody2D rb;
     private int currentHealth;
+
+    
 
     private enum EnemyState { Chase, Attack }
     private EnemyState currentState;
@@ -21,7 +25,7 @@ public class EnemyController : MonoBehaviour
         currentState = EnemyState.Chase;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (player == null) return;
 
@@ -43,7 +47,6 @@ public class EnemyController : MonoBehaviour
 
             case EnemyState.Attack:
                 rb.linearVelocity = Vector2.zero;
-                // Buraya attack animasyonu vs. gelir
                 if (distance > attackRange)
                 {
                     currentState = EnemyState.Chase;
@@ -64,16 +67,9 @@ public class EnemyController : MonoBehaviour
 
     void Die()
     {
-        // XP düşürme vs burada
+        Instantiate(xpOrbPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Bullet"))
-        {
-            TakeDamage(1); // Damage'ı bullet'tan da çekebilirsin
-            collision.gameObject.SetActive(false);
-        }
-    }
+
 }
