@@ -81,7 +81,7 @@ Assets/
 
 1. Clone the repository  
    ```bash
-   git clone https://github.com/yourusername/TopDownShooterTemplate.git
+   git clone https://github.com/yourusername/Top-Down-Shooter-Template.git
    ```
 
 2. Open with **Unity 2022 or later**
